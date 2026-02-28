@@ -1,0 +1,163 @@
+---
+import "../styles/global.css";
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Product Name",
+  description = "Modern product built with Astro",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body class="min-h-full bg-white text-zinc-900 antialiased">
+    <div class="flex min-h-screen flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 border-b border-zinc-200/50 bg-white/80 backdrop-blur"
+      >
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="flex h-16 items-center justify-between">
+            <a href="/" class="text-lg font-semibold tracking-tight"> Brand </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+              <a href="#features" class="hover:text-blue-600">Features</a>
+              <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+              <a href="#faq" class="hover:text-blue-600">FAQ</a>
+              <a
+                href="#cta"
+                class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+              >
+                Get Started
+              </a>
+            </nav>
+
+            <button class="md:hidden">☰</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="flex-1">
+        <!-- Hero -->
+        <section class="relative overflow-hidden">
+          <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:py-40">
+            <div class="mx-auto max-w-3xl text-center">
+              <h1
+                class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+              >
+                Build Faster With Astro
+              </h1>
+
+              <p class="mt-6 text-lg text-zinc-600 sm:text-xl">
+                A modern, high-performance foundation for marketing sites, SaaS
+                products, and startups.
+              </p>
+
+              <div
+                class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+              >
+                <a
+                  href="#"
+                  class="rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700"
+                >
+                  Start Free
+                </a>
+                <a
+                  href="#features"
+                  class="rounded-lg border border-zinc-300 px-6 py-3 font-medium hover:bg-zinc-100"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features -->
+        <section
+          id="features"
+          class="border-t border-zinc-200 bg-zinc-50 py-20"
+        >
+          <div class="mx-auto max-w-7xl px-6">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Everything you need
+              </h2>
+              <p class="mt-4 text-zinc-600">
+                Clean architecture, blazing performance, and modern DX.
+              </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl bg-white p-8 shadow-sm">
+                <h3 class="font-semibold text-lg">⚡ Fast by default</h3>
+                <p class="mt-4 text-zinc-600">
+                  Ships zero JS by default and hydrates only what you need.
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-white p-8 shadow-sm">
+                <h3 class="font-semibold text-lg">🧱 Component-based</h3>
+                <p class="mt-4 text-zinc-600">
+                  Build reusable UI blocks that scale with your product.
+                </p>
+              </div>
+
+              <div class="rounded-xl bg-white p-8 shadow-sm">
+                <h3 class="font-semibold text-lg">🚀 Production ready</h3>
+                <p class="mt-4 text-zinc-600">
+                  Optimized builds, edge-ready, and SEO friendly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="bg-blue-600 py-20">
+          <div class="mx-auto max-w-4xl px-6 text-center text-white">
+            <h2 class="text-3xl font-bold sm:text-4xl">Ready to launch?</h2>
+            <p class="mt-4 text-blue-100">
+              Get started today and ship something great.
+            </p>
+            <div class="mt-8">
+              <a
+                href="#"
+                class="inline-block rounded-lg bg-white px-6 py-3 font-medium text-blue-600 hover:bg-zinc-100"
+              >
+                Create Your Project
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-zinc-200 py-10">
+        <div class="mx-auto max-w-7xl px-6 text-sm text-zinc-500">
+          <div
+            class="flex flex-col items-center justify-between gap-4 sm:flex-row"
+          >
+            <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a href="#" class="hover:text-zinc-900">Privacy</a>
+              <a href="#" class="hover:text-zinc-900">Terms</a>
+              <a href="#" class="hover:text-zinc-900">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
