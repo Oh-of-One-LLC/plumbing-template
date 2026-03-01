@@ -1,0 +1,18 @@
+---
+const { companyName } = Astro.props;
+---
+
+<footer
+  class="bg-primary border-b border-slate-900 text-text-secondary text-center text-md p-8 flex justify-center"
+>
+  <p>&copy; <span id="year"></span> {companyName}. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  });
+</script>

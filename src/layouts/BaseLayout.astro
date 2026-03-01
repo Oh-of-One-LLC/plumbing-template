@@ -13,8 +13,12 @@ import "../styles/global.css";
   </head>
 
   <body class="min-h-full bg-white text-zinc-900 antialiased">
-    <div class="flex min-h-screen flex-col">
+    <div class="flex min-h-screen flex-col" id="top">
       <slot name="header" />
+
+      <main class="max-w-90vw" role="main"></main>
+
+      <slot name="footer" />
     </div>
   </body>
 </html>
