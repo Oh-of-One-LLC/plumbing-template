@@ -14,7 +14,9 @@ interface Props {
 const { menuItems, logo } = Astro.props;
 ---
 
-<header class="sticky top-0 z-50 bg-white border-b border-slate-200">
+<header
+  class="sticky top-0 z-50 bg-primary border-b border-slate-900 text-text-secondary"
+>
   <div
     class="lg:mx-auto mx-8 max-w-9/10 h-20 sm:px-8 lg:px-12 flex items-center justify-between"
   >
@@ -45,7 +47,7 @@ const { menuItems, logo } = Astro.props;
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="md:hidden overflow-hidden transition-all duration-300 max-h-0 absolute w-full bg-white"
+    class="md:hidden overflow-hidden transition-all duration-300 max-h-0 absolute w-full bg-primary"
   >
     <nav class="flex flex-col gap-4 text-base font-medium pb-5">
       {
