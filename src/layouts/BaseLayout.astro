@@ -1,5 +1,21 @@
 ---
 import "../styles/global.css";
+import Header from "../components/header.astro";
+import FooterBasic from "../components/footer-basic.astro";
+
+const menuItems = [
+  {
+    name: "Services",
+    href: "/#services",
+  },
+  {
+    name: "Call",
+    href: "/#call",
+  },
+];
+
+const logo = "Logo";
+const companyName = "Smith & Sons Plumbing";
 ---
 
 <!doctype html>
@@ -14,11 +30,11 @@ import "../styles/global.css";
 
   <body class="min-h-full bg-white text-zinc-900 antialiased">
     <div class="flex min-h-screen flex-col" id="top">
-      <slot name="header" />
+      <Header logo={logo} menuItems={menuItems} />
 
       <main class="max-w-90vw" role="main"></main>
 
-      <slot name="footer" />
+      <FooterBasic companyName={companyName} />
     </div>
   </body>
 </html>

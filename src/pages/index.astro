@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/header.astro";
-import FooterBasic from "../components/footer-basic.astro";
 
 const menuItems = [
   {
@@ -18,7 +16,4 @@ const logo = "Logo";
 const companyName = "Smith & Sons Plumbing";
 ---
 
-<BaseLayout>
-  <Header menuItems={menuItems} logo={logo} slot="header" />
-  <FooterBasic companyName={companyName} slot="footer" />
-</BaseLayout>
+<BaseLayout />
