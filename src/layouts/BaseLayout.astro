@@ -16,6 +16,8 @@ const menuItems = [
 
 const logo = "Logo";
 const companyName = "Smith & Sons Plumbing";
+
+const { pageTitle = companyName } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,7 +25,7 @@ const companyName = "Smith & Sons Plumbing";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smith and Sons Plumbing</title>
+    <title>{pageTitle}</title>
     <meta name="description" content="Plumbers you can trust" />
     <meta name="theme-color" content="#1d4ed8" />
   </head>
@@ -32,7 +34,9 @@ const companyName = "Smith & Sons Plumbing";
     <div class="flex min-h-screen flex-col" id="top">
       <Header logo={logo} menuItems={menuItems} />
 
-      <main class="max-w-90vw" role="main"></main>
+      <main class="max-w-90vw" role="main">
+        <slot name="main" />
+      </main>
 
       <FooterBasic companyName={companyName} />
     </div>
