@@ -1,14 +1,5 @@
 ---
 import "../styles/global.css";
-interface Props {
-  title?: string;
-  description?: string;
-}
-
-const {
-  title = "Product Name",
-  description = "Modern product built with Astro",
-} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,127 +7,142 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>Smith and Sons Plumbing</title>
+    <meta name="description" content="Plumbers you can trust" />
+    <meta name="theme-color" content="#1d4ed8" />
   </head>
 
   <body class="min-h-full bg-white text-zinc-900 antialiased">
     <div class="flex min-h-screen flex-col">
-      <!-- Header -->
-      <header
-        class="sticky top-0 z-50 border-b border-zinc-200/50 bg-white/80 backdrop-blur"
-      >
-        <div class="mx-auto max-w-7xl px-6">
-          <div class="flex h-16 items-center justify-between">
-            <a href="/" class="text-lg font-semibold tracking-tight"> Brand </a>
-
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-              <a href="#features" class="hover:text-blue-600">Features</a>
-              <a href="#pricing" class="hover:text-blue-600">Pricing</a>
-              <a href="#faq" class="hover:text-blue-600">FAQ</a>
-              <a
-                href="#cta"
-                class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
-              >
-                Get Started
-              </a>
-            </nav>
-
-            <button class="md:hidden">☰</button>
-          </div>
-        </div>
-      </header>
-
-      <!-- Main -->
+      <slot name="header" />
       <main class="flex-1">
         <!-- Hero -->
-        <section class="relative overflow-hidden">
-          <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:py-40">
-            <div class="mx-auto max-w-3xl text-center">
+        <section class="bg-blue-600 text-white">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8 py-24 lg:py-32">
+            <div class="max-w-3xl">
               <h1
                 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
               >
-                Build Faster With Astro
+                Trusted Plumbing Services in Austin, TX
               </h1>
 
-              <p class="mt-6 text-lg text-zinc-600 sm:text-xl">
-                A modern, high-performance foundation for marketing sites, SaaS
-                products, and startups.
+              <p class="mt-6 text-lg text-blue-100 sm:text-xl">
+                Licensed & insured professionals providing fast, affordable
+                residential and commercial plumbing solutions.
               </p>
 
-              <div
-                class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
-              >
+              <div class="mt-10 flex flex-col sm:flex-row gap-4">
                 <a
-                  href="#"
-                  class="rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700"
+                  href="tel:+15125551234"
+                  class="rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 hover:bg-zinc-100 focus-visible:ring-2 focus-visible:ring-white"
                 >
-                  Start Free
+                  📞 Call (512) 555-1234
                 </a>
+
                 <a
-                  href="#features"
-                  class="rounded-lg border border-zinc-300 px-6 py-3 font-medium hover:bg-zinc-100"
+                  href="#contact"
+                  class="rounded-lg border border-white px-6 py-3 font-semibold hover:bg-white/10"
                 >
-                  Learn More
+                  Request Free Estimate
                 </a>
+              </div>
+
+              <p class="mt-6 text-sm text-blue-200">
+                Same-day service available • Emergency repairs • 5-star rated
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-20">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Our Plumbing Services
+              </h2>
+              <p class="mt-4 text-zinc-600">
+                Complete plumbing solutions for homes and businesses.
+              </p>
+            </div>
+
+            <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="rounded-xl border border-zinc-200 p-8">
+                <h3 class="font-semibold text-lg">Emergency Repairs</h3>
+                <p class="mt-4 text-zinc-600">
+                  24/7 rapid response for leaks, burst pipes, and urgent
+                  plumbing issues.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-zinc-200 p-8">
+                <h3 class="font-semibold text-lg">Water Heater Installation</h3>
+                <p class="mt-4 text-zinc-600">
+                  Tank and tankless water heater replacement and maintenance.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-zinc-200 p-8">
+                <h3 class="font-semibold text-lg">Drain Cleaning</h3>
+                <p class="mt-4 text-zinc-600">
+                  Advanced equipment to remove stubborn clogs safely.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Features -->
-        <section
-          id="features"
-          class="border-t border-zinc-200 bg-zinc-50 py-20"
-        >
-          <div class="mx-auto max-w-7xl px-6">
-            <div class="mx-auto max-w-2xl text-center">
+        <!-- Why Choose Us -->
+        <section id="about" class="bg-zinc-50 py-20 border-t border-zinc-200">
+          <div
+            class="mx-auto max-w-7xl px-6 lg:px-8 grid gap-12 lg:grid-cols-2"
+          >
+            <div>
               <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
-                Everything you need
+                Why Homeowners Choose Us
               </h2>
-              <p class="mt-4 text-zinc-600">
-                Clean architecture, blazing performance, and modern DX.
-              </p>
+
+              <ul class="mt-8 space-y-4 text-zinc-600">
+                <li>✔ Licensed & insured technicians</li>
+                <li>✔ Upfront pricing — no hidden fees</li>
+                <li>✔ 15+ years of local experience</li>
+                <li>✔ Satisfaction guaranteed</li>
+              </ul>
             </div>
 
-            <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="rounded-xl bg-white p-8 shadow-sm">
-                <h3 class="font-semibold text-lg">⚡ Fast by default</h3>
-                <p class="mt-4 text-zinc-600">
-                  Ships zero JS by default and hydrates only what you need.
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white p-8 shadow-sm">
-                <h3 class="font-semibold text-lg">🧱 Component-based</h3>
-                <p class="mt-4 text-zinc-600">
-                  Build reusable UI blocks that scale with your product.
-                </p>
-              </div>
-
-              <div class="rounded-xl bg-white p-8 shadow-sm">
-                <h3 class="font-semibold text-lg">🚀 Production ready</h3>
-                <p class="mt-4 text-zinc-600">
-                  Optimized builds, edge-ready, and SEO friendly.
-                </p>
-              </div>
+            <div class="rounded-xl bg-white p-8 shadow-sm">
+              <p class="text-lg font-medium">
+                “Fast, professional, and honest. They fixed our leak the same
+                day we called.”
+              </p>
+              <p class="mt-4 text-sm text-zinc-500">— Sarah M., Austin TX</p>
             </div>
           </div>
         </section>
 
         <!-- CTA -->
-        <section id="cta" class="bg-blue-600 py-20">
-          <div class="mx-auto max-w-4xl px-6 text-center text-white">
-            <h2 class="text-3xl font-bold sm:text-4xl">Ready to launch?</h2>
+        <section id="contact" class="bg-blue-600 py-20 text-white">
+          <div class="mx-auto max-w-4xl px-6 text-center">
+            <h2 class="text-3xl font-bold sm:text-4xl">
+              Need a Reliable Plumber Today?
+            </h2>
             <p class="mt-4 text-blue-100">
-              Get started today and ship something great.
+              Call now or request your free estimate online.
             </p>
-            <div class="mt-8">
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+15125551234"
+                class="rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 hover:bg-zinc-100"
+              >
+                📞 Call (512) 555-1234
+              </a>
+
               <a
                 href="#"
-                class="inline-block rounded-lg bg-white px-6 py-3 font-medium text-blue-600 hover:bg-zinc-100"
+                class="rounded-lg border border-white px-6 py-3 font-semibold hover:bg-white/10"
               >
-                Create Your Project
+                Request Estimate
               </a>
             </div>
           </div>
@@ -144,16 +150,21 @@ const {
       </main>
 
       <!-- Footer -->
-      <footer class="border-t border-zinc-200 py-10">
-        <div class="mx-auto max-w-7xl px-6 text-sm text-zinc-500">
-          <div
-            class="flex flex-col items-center justify-between gap-4 sm:flex-row"
-          >
-            <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
-            <div class="flex gap-6">
-              <a href="#" class="hover:text-zinc-900">Privacy</a>
-              <a href="#" class="hover:text-zinc-900">Terms</a>
-              <a href="#" class="hover:text-zinc-900">Contact</a>
+      <footer class="border-t border-zinc-200 py-10 bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 text-sm text-zinc-500">
+          <div class="flex flex-col gap-4 sm:flex-row justify-between">
+            <div>
+              <p class="font-semibold text-zinc-900">Smith & Sons Plumbing</p>
+              <p>123 Main Street, Austin, TX</p>
+              <p>(512) 555-1234</p>
+            </div>
+
+            <div>
+              <p>© Smith & Sons Plumbing. All rights reserved.</p>
+              <div class="mt-2 flex gap-4">
+                <a href="#" class="hover:text-zinc-900">Privacy</a>
+                <a href="#" class="hover:text-zinc-900">Terms</a>
+              </div>
             </div>
           </div>
         </div>

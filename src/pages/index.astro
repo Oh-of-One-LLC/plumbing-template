@@ -1,5 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/header.astro";
+
+const menuItems = [
+  {
+    name: "Services",
+    href: "/#services",
+  },
+  {
+    name: "Call",
+    href: "/#call",
+  },
+];
+
+const logo = "Logo";
 ---
 
-<BaseLayout />
+<BaseLayout>
+  <Header menuItems={menuItems} logo={logo} slot="header" />
+</BaseLayout>
