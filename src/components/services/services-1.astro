@@ -42,7 +42,7 @@ const services = [
 <section
   id="services"
   aria-labelledby="services-heading"
-  class="w-full bg-background px-8 py-24 text-text md:py-32"
+  class="bg-background text-text w-full px-8 py-24 md:py-32"
 >
   <div class="mx-auto max-w-5xl">
     <div class="mb-12 flex flex-col gap-4 text-center md:mb-16">
@@ -52,7 +52,7 @@ const services = [
       >
         Our Services
       </h2>
-      <p class="mx-auto max-w-xl text-lg text-text-muted">
+      <p class="text-text-muted mx-auto max-w-xl text-lg">
         From routine maintenance to emergency call-outs, we've got every
         plumbing need covered.
       </p>
@@ -64,9 +64,9 @@ const services = [
     >
       {
         services.map((service) => (
-          <li class="flex flex-col gap-4 rounded-lg border border-border bg-surface p-6">
+          <li class="border-border bg-surface flex flex-col gap-4 rounded-lg border p-6">
             <div
-              class="text-brand flex h-10 w-10 items-center justify-center rounded-lg bg-raised"
+              class="text-brand bg-raised flex h-10 w-10 items-center justify-center rounded-lg"
               aria-hidden="true"
               set:html={service.icon}
             />
