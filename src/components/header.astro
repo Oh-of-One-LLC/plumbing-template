@@ -15,14 +15,14 @@ const { menuItems, logo } = Astro.props;
 ---
 
 <header
-  class="bg-primary text-text-secondary sticky top-0 z-50 border-b border-slate-900"
+  class="bg-brand text-brand-fg sticky top-0 z-50 border-b border-slate-900"
 >
   <div
     class="mx-8 flex h-20 max-w-9/10 items-center justify-between sm:px-8 lg:mx-auto lg:px-12"
   >
     <a
       href="/#top"
-      class="hover:text-text-secondary-hover focus:ring-offset- text-lg font-semibold transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none lg:text-2xl"
+      class="hover:text-brand-fg-muted text-lg font-semibold transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none lg:text-2xl"
       >{logo}</a
     >
     <!-- Desktop Nav -->
@@ -31,7 +31,7 @@ const { menuItems, logo } = Astro.props;
         (menuItems ?? []).map((item) => (
           <a
             href={item.href}
-            class="hover:text-text-secondary-hover focus:ring-offset- text-lg transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+            class="hover:text-brand-fg-muted text-lg transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
           >
             {item.name}
           </a>
@@ -54,7 +54,7 @@ const { menuItems, logo } = Astro.props;
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="bg-primary absolute max-h-0 w-full overflow-hidden transition-all duration-300 md:hidden"
+    class="bg-brand absolute max-h-0 w-full overflow-hidden transition-all duration-300 md:hidden"
   >
     <nav class="flex flex-col gap-4 pb-5 text-base font-medium">
       {

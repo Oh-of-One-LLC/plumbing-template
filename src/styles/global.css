@@ -1,12 +1,77 @@
 @import "tailwindcss";
 
+/* ============================================
+   Static Brand Colors
+   These never change between light and dark mode.
+   Used for primary sections: header, hero, footer.
+   ============================================ */
 @theme {
-  --color-primary: #020618;
-  --color-text: #020618;
-  --color-text-secondary: #ffffff;
-  --color-text-secondary-hover: #c0c0c0;
-  /* --color-background: #7c6d67;
+  --color-brand:          #020618; /* Dark navy */
+  --color-brand-subtle:   #0d1829; /* Nested brand surfaces */
+  --color-brand-fg:       #ffffff; /* Text on brand bg */
+  --color-brand-fg-muted: #8fa8c8; /* Muted text on brand bg */
+}
 
- --color-secondary:
-  --color-accent */
+/* ============================================
+   Semantic Colors — Light Mode (default)
+   ============================================ */
+:root {
+  --color-bg:          #f8f9fa; /* Page background */
+  --color-bg-surface:  #ffffff; /* Cards, panels */
+  --color-bg-raised:   #f1f3f5; /* Inputs, elevated surfaces */
+
+  --color-tx:          #0d0f14; /* Primary text */
+  --color-tx-muted:    #64748b; /* Supporting text */
+  --color-tx-subtle:   #717a8a; /* Placeholders, captions */
+
+  --color-bd:          #e2e8f0; /* Default border */
+  --color-bd-strong:   #cbd5e0; /* Emphasized border */
+
+  --color-ac:          #2563eb; /* Accent — CTAs, links */
+  --color-ac-fg:       #ffffff; /* Text on accent bg */
+}
+
+/* ============================================
+   Semantic Colors — Dark Mode
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:          #0d1526;
+    --color-bg-surface:  #152035;
+    --color-bg-raised:   #1e2d47;
+
+    --color-tx:          #edf2f7;
+    --color-tx-muted:    #8fa8c8;
+    --color-tx-subtle:   #6b8eae;
+
+    --color-bd:          #1e2d47;
+    --color-bd-strong:   #2a3f63;
+
+    --color-ac:          #60a5fa;
+    --color-ac-fg:       #0d1526;
+  }
+}
+
+/* ============================================
+   Tailwind Utility Mapping
+   Exposes semantic colors as Tailwind classes:
+   bg-background, bg-surface, bg-raised,
+   text-text, text-text-muted, text-text-subtle,
+   border-border, border-border-strong,
+   bg-accent, text-accent-fg
+   ============================================ */
+@theme inline {
+  --color-background:    var(--color-bg);
+  --color-surface:       var(--color-bg-surface);
+  --color-raised:        var(--color-bg-raised);
+
+  --color-text:          var(--color-tx);
+  --color-text-muted:    var(--color-tx-muted);
+  --color-text-subtle:   var(--color-tx-subtle);
+
+  --color-border:        var(--color-bd);
+  --color-border-strong: var(--color-bd-strong);
+
+  --color-accent:        var(--color-ac);
+  --color-accent-fg:     var(--color-ac-fg);
 }
