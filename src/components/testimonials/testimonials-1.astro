@@ -1,0 +1,100 @@
+---
+const testimonials = [
+  {
+    quote:
+      "Smith & Sons showed up within the hour at 2am when our pipe burst. Absolute lifesavers — professional, calm, and had it sorted before sunrise.",
+    name: "Sarah Mitchell",
+    context: "Homeowner, emergency repair",
+  },
+  {
+    quote:
+      "We had a persistent leak under the kitchen sink that two other plumbers couldn't fix properly. These guys diagnosed it immediately and sorted it for good.",
+    name: "James Torres",
+    context: "Homeowner, kitchen plumbing",
+  },
+  {
+    quote:
+      "Used Smith & Sons for a full bathroom refit. Punctual, tidy, and the finished work is flawless. Highly recommend for any renovation job.",
+    name: "Linda Rhodes",
+    context: "Homeowner, bathroom renovation",
+  },
+  {
+    quote:
+      "We brought them in to replumb our restaurant kitchen. They worked around our schedule to minimise downtime. Couldn't ask for more.",
+    name: "Mike Delaney",
+    context: "Restaurant owner, commercial fit-out",
+  },
+  {
+    quote:
+      "Our water heater packed in mid-winter. They had a new one installed the same day. Fair pricing and no upselling — just honest, good work.",
+    name: "Carol Bentley",
+    context: "Homeowner, water heater replacement",
+  },
+  {
+    quote:
+      "Quick, no-fuss drain cleaning. Arrived on time, explained everything clearly, and left the place spotless. Will definitely call again.",
+    name: "Tom Hargreaves",
+    context: "Landlord, drain maintenance",
+  },
+];
+
+const stars = Array(5).fill(null);
+---
+
+<section
+  id="testimonials"
+  aria-labelledby="testimonials-heading"
+  class="w-full bg-white px-8 py-24 text-zinc-900 md:py-32"
+>
+  <div class="mx-auto max-w-5xl">
+    <div class="mb-12 flex flex-col gap-4 text-center md:mb-16">
+      <h2
+        id="testimonials-heading"
+        class="text-4xl font-bold tracking-tight md:text-5xl"
+      >
+        What Our Customers Say
+      </h2>
+      <p class="mx-auto max-w-xl text-lg text-zinc-600">
+        Don't just take our word for it — here's what real customers think.
+      </p>
+    </div>
+
+    <ul
+      class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      role="list"
+    >
+      {
+        testimonials.map((t) => (
+          <li>
+            <blockquote class="flex h-full flex-col gap-4 rounded-lg border border-zinc-200 p-6">
+              <div class="flex gap-1" aria-hidden="true">
+                {stars.map(() => (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="text-amber-400"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                ))}
+              </div>
+              <p class="grow text-zinc-700">"{t.quote}"</p>
+              <footer>
+                <cite class="not-italic">
+                  <span class="block font-semibold text-zinc-900">
+                    {t.name}
+                  </span>
+                  <span class="text-sm text-zinc-500">{t.context}</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
