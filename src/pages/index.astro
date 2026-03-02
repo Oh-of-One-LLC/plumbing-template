@@ -1,8 +1,12 @@
 ---
-import Hero from "../components/hero.astro";
+import Hero from "../components/hero/hero-1.astro";
+import About from "../components/about/about-1.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <Hero slot="main" />
+  <Fragment slot="main">
+    <Hero />
+    <About />
+  </Fragment>
 </BaseLayout>
