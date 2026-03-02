@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { COMPANY_NAME as companyName } from "../config";
 
-const companyName = "Smith & Sons Plumbing";
 const privacyEmail = "privacy@smithplumbing.com";
 ---
 
@@ -67,10 +67,7 @@ const privacyEmail = "privacy@smithplumbing.com";
     <p class="">
       If you have any questions about these Terms, please contact us at
       <span class="not-italic" role="contentinfo">
-        <span class="not-italic" role="contentinfo">
-          <a href={`mailto:${privacyEmail}`} class="underline">{privacyEmail}</a
-          >.
-        </span>
+        <a href={`mailto:${privacyEmail}`} class="underline">{privacyEmail}</a>.
       </span>
     </p>
   </section>

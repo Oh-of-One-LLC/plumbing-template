@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer/footer-with-form.astro";
+import { COMPANY_NAME as companyName, PHONE as phone } from "../config";
 
 const menuItems = [
   {
@@ -15,8 +16,6 @@ const menuItems = [
 ];
 
 const logo = "Logo";
-const companyName = "Smith & Sons Plumbing";
-const phone = "(555) 123-4567";
 
 const { pageTitle = companyName } = Astro.props;
 ---
@@ -35,7 +34,7 @@ const { pageTitle = companyName } = Astro.props;
     <div class="flex min-h-screen flex-col" id="top">
       <Header logo={logo} menuItems={menuItems} />
 
-      <main class="max-w-90vw" role="main">
+      <main class="max-w-90vw flex-1" role="main">
         <slot name="main" />
       </main>
 
