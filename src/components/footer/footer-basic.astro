@@ -10,14 +10,14 @@ const { companyName } = Astro.props;
     <li>
       <a
         href="/privacy-policy"
-        class="hover:text-brand-fg-muted transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+        class="hover:text-brand-fg-muted focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >Privacy Policy</a
       >
     </li>
     <li>
       <a
         href="/terms-of-use"
-        class="hover:text-brand-fg-muted transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+        class="hover:text-brand-fg-muted focus:ring-offset-brand transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >Terms of Use</a
       >
     </li>
@@ -28,7 +28,7 @@ const { companyName } = Astro.props;
   document.addEventListener("DOMContentLoaded", function () {
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
+      yearSpan.textContent = String(new Date().getFullYear());
     }
   });
 </script>

@@ -20,7 +20,7 @@ const { companyName, phone } = Astro.props;
         </div>
         <a
           href={`tel:${phone}`}
-          class="hover:text-brand-fg-muted inline-flex items-center gap-2 text-lg font-semibold transition focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+          class="hover:text-brand-fg-muted focus:ring-offset-brand inline-flex items-center gap-2 text-lg font-semibold transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           aria-label={`Call us at ${phone}`}
         >
           <svg
@@ -124,11 +124,11 @@ const { companyName, phone } = Astro.props;
           <p class="text-brand-fg-muted mt-2 text-sm">
             By submitting this form, you agree to our <a
               href="/terms-of-use"
-              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-1 focus:outline-none"
+              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
               >Terms of Use</a
             > and <a
               href="/privacy-policy"
-              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-1 focus:outline-none"
+              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
               >Privacy Policy</a
             >.
           </p>
@@ -147,14 +147,14 @@ const { companyName, phone } = Astro.props;
         <li>
           <a
             href="/privacy-policy"
-            class="hover:text-brand-fg-muted text-sm transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+            class="hover:text-brand-fg-muted focus:ring-offset-brand text-sm transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             >Privacy Policy</a
           >
         </li>
         <li>
           <a
             href="/terms-of-use"
-            class="hover:text-brand-fg-muted text-sm transition-all focus:underline focus:ring-1 focus:ring-slate-400 focus:ring-offset-white focus:outline-none"
+            class="hover:text-brand-fg-muted focus:ring-offset-brand text-sm transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             >Terms of Use</a
           >
         </li>
@@ -179,7 +179,7 @@ const { companyName, phone } = Astro.props;
   document.addEventListener("DOMContentLoaded", function () {
     const yearSpan = document.getElementById("footer-year");
     if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
+      yearSpan.textContent = String(new Date().getFullYear());
     }
 
     const form = document.querySelector<HTMLFormElement>(

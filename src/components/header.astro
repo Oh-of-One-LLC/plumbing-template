@@ -22,7 +22,7 @@ const { menuItems, logo } = Astro.props;
   >
     <a
       href="/#top"
-      class="hover:text-brand-fg-muted focus:ring-accent focus:ring-offset-surface text-lg font-semibold transition-all focus:ring-2 focus:ring-offset-2 lg:text-2xl"
+      class="hover:text-brand-fg-muted focus:ring-offset-brand text-lg font-semibold transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none lg:text-2xl"
       >{logo}</a
     >
     <!-- Desktop Nav -->
@@ -31,7 +31,7 @@ const { menuItems, logo } = Astro.props;
         (menuItems ?? []).map((item) => (
           <a
             href={item.href}
-            class="hover:text-brand-fg-muted focus:ring-accent focus:ring-offset-surface text-lg transition-all focus:ring-2 focus:ring-offset-2"
+            class="hover:text-brand-fg-muted focus:ring-offset-brand text-lg transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           >
             {item.name}
           </a>
@@ -42,7 +42,7 @@ const { menuItems, logo } = Astro.props;
     <!-- Mobile Button -->
     <button
       id="menu-btn"
-      class="rounded-lg p-4 text-3xl transition hover:bg-slate-100 md:hidden"
+      class="focus:ring-offset-brand rounded-lg p-4 text-3xl transition hover:bg-slate-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none md:hidden"
       aria-label="Toggle Menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -59,7 +59,10 @@ const { menuItems, logo } = Astro.props;
     <nav class="flex flex-col gap-4 pb-5 text-base font-medium">
       {
         (menuItems ?? []).map((item) => (
-          <a href={item.href} class="mx-8 text-lg">
+          <a
+            href={item.href}
+            class="focus:ring-offset-brand mx-8 text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          >
             {item.name}
           </a>
         ))
