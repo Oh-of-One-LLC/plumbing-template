@@ -13,6 +13,7 @@
   --color-brand-red: #3d5fe0; /* Lighter cobalt for highlights within brand sections */
   --color-brand-red-fg: #ffffff; /* Text on brand-red bg */
   --color-accent: #ff6a00;
+  --color-accent-muted: #e55e00;
   --color-tx: #111827; /* Primary text */
 }
 

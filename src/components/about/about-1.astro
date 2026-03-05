@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import { COMPANY_NAME as companyName } from "../../config";
+import Denver from "../../assets/denver.jpg";
 ---
 
 <section
@@ -17,51 +19,26 @@ import { COMPANY_NAME as companyName } from "../../config";
           About {companyName}
         </h2>
         <p class="text-text-muted text-lg">
-          Family-owned and operated for over 20 years, Smith &amp; Sons Plumbing
-          has built a reputation for honest, high-quality work across
-          residential and commercial properties.
-        </p>
-        <p class="text-text-muted text-lg">
-          Our licensed plumbers are available around the clock — so you're never
-          left without help when you need it most.
+          At Lowe Plumbing, we believe every customer deserves honest work done
+          right the first time. Dennis has spent years building a reputation on
+          integrity, quality craftsmanship, and fair pricing — and that
+          commitment shows in every job we take on. We're proud to serve the
+          Colorado community and grateful for the trust you place in us.
         </p>
         <a
           href="/#call"
-          class="bg-brand-red text-brand-red-fg focus:ring-brand-red focus:ring-offset-surface mt-2 inline-flex w-fit rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:outline-none"
+          class="bg-brand text-brand-red-fg focus:ring-brand-red focus:ring-offset-surface mt-2 inline-flex w-fit rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none"
         >
           Get in Touch
         </a>
       </div>
 
-      <dl
-        class="grid grid-cols-2 gap-4 md:flex-1"
-        aria-label="Company highlights"
-      >
-        <div
-          class="border-border bg-background flex flex-col gap-1 rounded-lg border p-6"
-        >
-          <dt class="text-text-muted">Years in business</dt>
-          <dd class="text-brand-red text-3xl font-bold">20+</dd>
-        </div>
-        <div
-          class="border-border bg-background flex flex-col gap-1 rounded-lg border p-6"
-        >
-          <dt class="text-text-muted">Emergency service</dt>
-          <dd class="text-brand-red text-3xl font-bold">24/7</dd>
-        </div>
-        <div
-          class="border-border bg-background flex flex-col gap-1 rounded-lg border p-6"
-        >
-          <dt class="text-text-muted">Happy customers</dt>
-          <dd class="text-brand-red text-3xl font-bold">500+</dd>
-        </div>
-        <div
-          class="border-border bg-background flex flex-col gap-1 rounded-lg border p-6"
-        >
-          <dt class="text-text-muted">Licensed &amp; insured</dt>
-          <dd class="text-brand-red text-3xl font-bold">100%</dd>
-        </div>
-      </dl>
+      <Image
+        src={Denver}
+        alt=""
+        class="w-110 rounded-sm shadow-lg"
+        loading="lazy"
+      />
     </div>
   </div>
 </section>

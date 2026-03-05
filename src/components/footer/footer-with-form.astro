@@ -20,7 +20,7 @@ const { companyName, phone } = Astro.props;
         </div>
         <a
           href={`tel:${phone}`}
-          class="hover:text-brand-fg-muted focus:ring-offset-brand inline-flex items-center gap-2 text-lg font-semibold transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          class="focus:ring-offset-brand inline-flex items-center gap-2 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           aria-label={`Call us at ${phone}`}
         >
           <svg
@@ -118,7 +118,7 @@ const { companyName, phone } = Astro.props;
 
           <button
             type="submit"
-            class="bg-brand-fg text-brand hover:bg-brand-fg-muted focus:ring-offset-brand mt-2 w-full rounded-lg px-8 py-3 text-lg font-semibold transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none sm:w-fit"
+            class="bg-brand-fg text-brand focus:ring-offset-brand mt-2 w-full rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none sm:w-fit"
           >
             Send Message
           </button>
@@ -126,11 +126,11 @@ const { companyName, phone } = Astro.props;
           <p class="text-brand-fg-muted mt-2 text-sm">
             By submitting this form, you agree to our <a
               href="/terms-of-use"
-              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+              class="focus:ring-offset-brand italic transition-all hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
               >Terms of Use</a
             > and <a
               href="/privacy-policy"
-              class="hover:text-brand-fg focus:ring-offset-brand italic transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+              class="focus:ring-offset-brand italic transition-all hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
               >Privacy Policy</a
             >.
           </p>
@@ -156,14 +156,14 @@ const { companyName, phone } = Astro.props;
         <li>
           <a
             href="/privacy-policy"
-            class="hover:text-brand-fg-muted focus:ring-offset-brand text-sm transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            class="focus:ring-offset-brand text-sm transition-all hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             >Privacy Policy</a
           >
         </li>
         <li>
           <a
             href="/terms-of-use"
-            class="hover:text-brand-fg-muted focus:ring-offset-brand text-sm transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            class="focus:ring-offset-brand text-sm transition-all hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             >Terms of Use</a
           >
         </li>

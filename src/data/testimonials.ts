@@ -1,38 +1,38 @@
 export const testimonials = [
   {
     quote:
-      "Smith & Sons showed up within the hour at 2am when our pipe burst. Absolute lifesavers — professional, calm, and had it sorted before sunrise.",
-    name: "Sarah Mitchell",
-    context: "Homeowner, emergency repair",
+      "Dennis is great all around: professional, good customer service skills, competitive prices, excellent quality of work.",
+    name: "Meisha C.",
+    context: "Faucets, Fixtures and Pipes Repair or Replace",
   },
   {
     quote:
-      "We had a persistent leak under the kitchen sink that two other plumbers couldn't fix properly. These guys diagnosed it immediately and sorted it for good.",
-    name: "James Torres",
-    context: "Homeowner, kitchen plumbing",
+      "He is dependable, good followup - detail oriented. Very reasonable pricing.",
+    name: "Steve V.",
+    context: "Plumbing Installation for a Remodel",
   },
   {
     quote:
-      "Used Smith & Sons for a full bathroom refit. Punctual, tidy, and the finished work is flawless. Highly recommend for any renovation job.",
-    name: "Linda Rhodes",
-    context: "Homeowner, bathroom renovation",
+      "Dennis is really great to work with. He was very polite and explained all of the work that he did when he was done. Should I ever need plumbing services again in the future, I already know I'll be checking in with Lowe Plumbing for it.",
+    name: "Lloyd M.",
+    context: "Bathtub Installation and Replacement",
   },
   {
     quote:
-      "We brought them in to replumb our restaurant kitchen. They worked around our schedule to minimise downtime. Couldn't ask for more.",
-    name: "Mike Delaney",
-    context: "Restaurant owner, commercial fit-out",
+      "I can't recommend Dennis enough. It's hard to find people of his character and overall quality work these days. Don't waste your time and look anywhere else. Hire Dennis",
+    name: "Ryan T.",
+    context: "Faucets, Fixtures and Pipes Repair or Replace",
   },
   {
     quote:
-      "Our water heater packed in mid-winter. They had a new one installed the same day. Fair pricing and no upselling — just honest, good work.",
-    name: "Carol Bentley",
-    context: "Homeowner, water heater replacement",
+      "Very fast text/phone/email correspondence. Fair pricing. Quality work. Won't hire anyone else!",
+    name: "Jameson R.",
+    context: "Faucets, Fixtures and Pipes Repair or Replace",
   },
   {
     quote:
-      "Quick, no-fuss drain cleaning. Arrived on time, explained everything clearly, and left the place spotless. Will definitely call again.",
-    name: "Tom Hargreaves",
-    context: "Landlord, drain maintenance",
+      "Quick and courteous for gas line install to a stove. Reasonable pricing and very responsive. Would use again!",
+    name: "Joseph H.",
+    context: "Gas Piping",
   },
 ];
