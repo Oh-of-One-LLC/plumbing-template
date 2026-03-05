@@ -1,0 +1,127 @@
+---
+import { PHONE } from "../../config";
+---
+
+<section class="bg-brand text-brand-fg w-full px-8 py-24 md:pt-15 md:pb-24">
+  <div
+    class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16"
+  >
+    <!-- Text column -->
+    <div class="flex flex-col gap-8">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-3">
+        <div class="bg-brand-red h-0.5 w-8" aria-hidden="true"></div>
+        <p
+          class="text-brand-fg-muted text-xs font-semibold tracking-widest uppercase"
+        >
+          Available 24/7 for emergencies
+        </p>
+      </div>
+
+      <!-- Headline -->
+      <h1
+        class="font-['Georgia',serif] text-5xl leading-tight font-bold tracking-tight md:text-6xl"
+      >
+        Expert Plumbing<br />You Can <span class="text-brand-red">Trust.</span>
+      </h1>
+
+      <!-- Supporting copy -->
+      <p class="text-brand-fg-muted max-w-md text-lg">
+        Fast, reliable service for homes and businesses across Denver. Licensed,
+        insured, and family-owned for over 20 years.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col gap-4 sm:flex-row text-center">
+        <a
+          href="/#call"
+          class="bg-brand-red text-brand-red-fg focus:ring-offset-brand rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+        >
+          Get a Free Quote
+        </a>
+        <a
+          href={`tel:${PHONE}`}
+          class="text-brand-fg focus:ring-offset-brand rounded-lg border border-white/30 px-8 py-3 text-lg font-semibold transition hover:bg-white/10 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+        >
+          Call Now
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <dl class="flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
+        <div class="flex flex-col gap-0.5">
+          <dd class="text-3xl font-bold">20+</dd>
+          <dt class="text-brand-fg-muted text-sm">Years in business</dt>
+        </div>
+        <div class="h-auto w-px self-stretch bg-white/10" aria-hidden="true">
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <dd class="text-3xl font-bold">500+</dd>
+          <dt class="text-brand-fg-muted text-sm">Happy customers</dt>
+        </div>
+        <div class="h-auto w-px self-stretch bg-white/10" aria-hidden="true">
+        </div>
+        <div class="flex flex-col gap-0.5">
+          <dd class="text-3xl font-bold">24/7</dd>
+          <dt class="text-brand-fg-muted text-sm">Emergency service</dt>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Emergency Call Card -->
+    <aside
+      class="bg-brand-subtle flex flex-col gap-6 rounded-xl border border-white/10 p-8"
+      aria-label="Emergency contact"
+    >
+      <p class="text-brand-fg-muted text-xs font-semibold tracking-widest uppercase">
+        Emergency / Call Us
+      </p>
+
+      <div class="flex flex-col gap-3">
+        <h2 class="font-['Georgia',serif] text-2xl leading-snug font-bold">
+          Burst pipe? Flooding?<br />We're on our way.
+        </h2>
+        <a
+          href={`tel:${PHONE}`}
+          class="text-brand-fg hover:text-brand-red text-3xl font-bold tracking-tight transition focus:ring-2 focus:ring-white focus:outline-none"
+          aria-label={`Call us at ${PHONE}`}
+        >
+          {PHONE}
+        </a>
+        <p class="text-brand-fg-muted text-sm">
+          Call us now — we'll be there within the hour.
+        </p>
+      </div>
+
+      <ul class="flex flex-col gap-3" role="list">
+        {
+          [
+            "Licensed & fully insured",
+            "Flat-rate, upfront pricing",
+            "No overtime charges",
+            "Satisfaction guaranteed",
+          ].map((item) => (
+            <li class="text-brand-fg-muted flex items-center gap-3 text-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-brand-red shrink-0"
+                aria-hidden="true"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+  </div>
+</section>

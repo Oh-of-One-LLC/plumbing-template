@@ -5,17 +5,12 @@ import Footer from "../components/footer/footer-with-form.astro";
 import { COMPANY_NAME as companyName, PHONE as phone } from "../config";
 
 const menuItems = [
-  {
-    name: "Services",
-    href: "/#services",
-  },
-  {
-    name: "Call",
-    href: "/#call",
-  },
+  { name: "Services", href: "/#services" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#call" },
 ];
 
-const logo = "Logo";
+const logo = companyName;
 
 const { pageTitle = companyName } = Astro.props;
 ---
@@ -32,7 +27,7 @@ const { pageTitle = companyName } = Astro.props;
 
   <body class="bg-background text-text min-h-full antialiased">
     <div class="flex min-h-screen flex-col" id="top">
-      <Header logo={logo} menuItems={menuItems} />
+      <Header logo={logo} menuItems={menuItems} phone={phone} />
 
       <main class="max-w-90vw flex-1" role="main">
         <slot name="main" />

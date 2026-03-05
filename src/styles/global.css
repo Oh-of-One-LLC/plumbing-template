@@ -10,6 +10,8 @@
   --color-brand-subtle: #0d1829; /* Nested brand surfaces */
   --color-brand-fg: #ffffff; /* Text on brand bg */
   --color-brand-fg-muted: #8fa8c8; /* Muted text on brand bg */
+  --color-brand-red: #dc2626; /* Red accent for brand sections */
+  --color-brand-red-fg: #ffffff; /* Text on brand-red bg */
 }
 
 /* ============================================
@@ -21,8 +23,8 @@
   --color-bg-raised: #f1f3f5; /* Inputs, elevated surfaces */
 
   --color-tx: #0d0f14; /* Primary text */
-  --color-tx-muted: #64748b; /* Supporting text */
-  --color-tx-subtle: #717a8a; /* Placeholders, captions */
+  --color-tx-muted: #5d6b82; /* Supporting text — #64748b was 4.41:1 on bg-background, fails AA */
+  --color-tx-subtle: #606b7f; /* Placeholders, captions — #717a8a was 4.33:1 on bg-surface, fails AA */
 
   --color-bd: #e2e8f0; /* Default border */
   --color-bd-strong: #cbd5e0; /* Emphasized border */
@@ -38,7 +40,7 @@
   :root {
     --color-bg: #0d1526;
     --color-bg-surface: #152035;
-    --color-bg-raised: #1e2d47;
+    --color-bg-raised: #192840; /* #1e2d47 gave 2.86:1 for brand-red icons, fails AA non-text */
 
     --color-tx: #edf2f7;
     --color-tx-muted: #8fa8c8;
