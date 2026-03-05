@@ -12,8 +12,8 @@
   --color-brand-fg-muted: #c8d5f8; /* Muted text on brand bg */
   --color-brand-red: #3d5fe0; /* Lighter cobalt for highlights within brand sections */
   --color-brand-red-fg: #ffffff; /* Text on brand-red bg */
-  --color-accent: #ff6a00;
-  --color-accent-muted: #e55e00;
+  --color-accent: #eed202;
+  --color-accent-muted: #fde635;
   --color-tx: #111827; /* Primary text */
 }
 
@@ -32,7 +32,7 @@
   --color-bd: #e5e7eb; /* Default border */
   --color-bd-strong: #d1d5db; /* Emphasized border */
 
-  --color-ac: #f95d00;
+  --color-ac: #fde635;
   --color-ac-fg: #ffffff; /* Text on accent bg */
 }
 
