@@ -3,8 +3,8 @@ const { companyName, phone } = Astro.props;
 ---
 
 <footer
-  id="call"
-  class="bg-brand text-brand-fg w-full px-8 py-16"
+  id="contact"
+  class="bg-brand text-brand-fg w-full scroll-mt-10 px-8 py-16"
   aria-labelledby="footer-heading"
 >
   <div class="mx-auto max-w-5xl">
@@ -13,14 +13,14 @@ const { companyName, phone } = Astro.props;
       <div class="flex flex-col gap-6 md:w-64 md:shrink-0">
         <div class="flex flex-col gap-2">
           <h2 id="footer-heading" class="text-xl font-bold">{companyName}</h2>
-          <p class="text-brand-fg-muted">
+          <p class="text-brand-fg">
             Available 24/7 for emergencies. Call us or send a message and we'll
             get back to you as soon as possible.
           </p>
         </div>
         <a
           href={`tel:${phone}`}
-          class="focus:ring-offset-brand inline-flex items-center gap-2 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          class="focus:ring-offset-brand text-accent inline-flex items-center gap-2 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           aria-label={`Call us at ${phone}`}
         >
           <svg
@@ -64,7 +64,7 @@ const { companyName, phone } = Astro.props;
               required
               aria-required="true"
               placeholder="Jane Smith"
-              class="text-brand-fg rounded-lg border border-zinc-700 bg-white/10 px-4 py-2.5 placeholder-zinc-500 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+              class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
             />
           </div>
 
@@ -82,7 +82,7 @@ const { companyName, phone } = Astro.props;
                 required
                 autocomplete="tel"
                 placeholder="+1 (555) 000-0000"
-                class="text-brand-fg rounded-lg border border-zinc-700 bg-white/10 px-4 py-2.5 placeholder-zinc-500 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+                class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
               />
             </div>
             <div class="flex flex-1 flex-col gap-1">
@@ -96,7 +96,7 @@ const { companyName, phone } = Astro.props;
                 autocomplete="email"
                 aria-required="true"
                 placeholder="jane@example.com"
-                class="text-brand-fg rounded-lg border border-zinc-700 bg-white/10 px-4 py-2.5 placeholder-zinc-500 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+                class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
               />
             </div>
           </div>
@@ -112,7 +112,7 @@ const { companyName, phone } = Astro.props;
               required
               aria-required="true"
               placeholder="Tell us about your plumbing issue..."
-              class="text-brand-fg resize-y rounded-lg border border-zinc-700 bg-white/10 px-4 py-2.5 placeholder-zinc-500 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+              class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
             ></textarea>
           </div>
 
