@@ -20,7 +20,7 @@ const { companyName, phone } = Astro.props;
         </div>
         <a
           href={`tel:${phone}`}
-          class="focus:ring-offset-brand text-accent inline-flex items-center gap-2 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          class="focus:ring-offset-brand text-brand-fg inline-flex items-center gap-2 text-lg font-semibold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           aria-label={`Call us at ${phone}`}
         >
           <svg
@@ -64,7 +64,7 @@ const { companyName, phone } = Astro.props;
               required
               aria-required="true"
               placeholder="Jane Smith"
-              class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+              class="text-brand-fg placeholder-brand-fg/75 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
             />
           </div>
 
@@ -82,7 +82,7 @@ const { companyName, phone } = Astro.props;
                 required
                 autocomplete="tel"
                 placeholder="+1 (555) 000-0000"
-                class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+                class="text-brand-fg placeholder-brand-fg/75 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
               />
             </div>
             <div class="flex flex-1 flex-col gap-1">
@@ -94,9 +94,8 @@ const { companyName, phone } = Astro.props;
                 id="contact-email"
                 name="email"
                 autocomplete="email"
-                aria-required="true"
                 placeholder="jane@example.com"
-                class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+                class="text-brand-fg placeholder-brand-fg/75 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
               />
             </div>
           </div>
@@ -112,7 +111,7 @@ const { companyName, phone } = Astro.props;
               required
               aria-required="true"
               placeholder="Tell us about your plumbing issue..."
-              class="text-brand-fg placeholder-brand-fg/50 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
+              class="text-brand-fg placeholder-brand-fg/75 rounded-lg border border-zinc-700 bg-black/10 px-4 py-2.5 transition focus:border-transparent focus:ring-2 focus:ring-white focus:outline-none"
             ></textarea>
           </div>
 

@@ -11,7 +11,9 @@ import { PHONE } from "../../config";
       <!-- Eyebrow -->
       <div class="flex items-center gap-3">
         <div class="h-0.5 w-8 bg-white" aria-hidden="true"></div>
-        <p class="text-accent text-xs font-semibold tracking-widest uppercase">
+        <p
+          class="text-brand-fg-muted text-xs font-semibold tracking-widest uppercase"
+        >
           Lowe Plumbing and Drain Cleaning
         </p>
       </div>
@@ -25,20 +27,21 @@ import { PHONE } from "../../config";
 
       <!-- Supporting copy -->
       <p class="text-brand-fg max-w-md text-lg">
-        Fast, reliable service for homes and businesses across Denver. Licensed,
-        insured, and family-owned for over 6 years.
+        Fast, reliable service for homes and businesses across the Denver metro.
+        Licensed, insured, and family-owned for over 6 years.
       </p>
 
       <!-- CTAs -->
       <div class="flex flex-col gap-4 text-center sm:flex-row">
         <a
-          href="/#call"
+          href="/#contact"
           class="bg-accent text-brand-red-fg hover:bg-accent-muted focus:ring-offset-brand rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >
           Get a Free Quote
         </a>
         <a
           href={`tel:${PHONE}`}
+          aria-label="Call now"
           class="bg-brand-fg text-brand hover:bg-brand-fg-muted focus:ring-offset-brand rounded-lg border border-white/30 px-8 py-3 text-lg font-semibold transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >
           Call Now
@@ -83,7 +86,7 @@ import { PHONE } from "../../config";
         </h2>
         <a
           href={`tel:${PHONE}`}
-          class="text-accent text-3xl font-bold tracking-tight transition hover:opacity-80 focus:ring-2 focus:ring-white focus:outline-none"
+          class="text-brand text-3xl font-bold tracking-tight transition hover:opacity-80 focus:ring-2 focus:ring-white focus:outline-none"
           aria-label={`Call us at ${PHONE}`}
         >
           {PHONE}

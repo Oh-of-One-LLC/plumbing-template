@@ -1,6 +1,7 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+
+import LowePlumbing from "../assets/lowePlumbing.jpg";
 
 interface MenuItem {
   name: string;
@@ -8,7 +9,7 @@ interface MenuItem {
 }
 
 interface Props {
-  logo: string | ImageMetadata;
+  logo?: string;
   menuItems: MenuItem[];
   phone?: string;
 }
@@ -28,7 +29,7 @@ const { menuItems, logo, phone } = Astro.props;
           logo
         ) : (
           <Image
-            src={logo}
+            src={LowePlumbing}
             alt=""
             class="h-full w-auto rounded-lg object-contain"
           />
@@ -36,7 +37,7 @@ const { menuItems, logo, phone } = Astro.props;
       }</a
     >
     <!-- Desktop Nav -->
-    <nav class="hidden gap-8 text-base font-medium md:flex">
+    <nav class="hidden gap-8 text-base md:flex">
       {
         (menuItems ?? []).map((item) => (
           <a
@@ -54,7 +55,7 @@ const { menuItems, logo, phone } = Astro.props;
       phone && (
         <a
           href={`tel:${phone}`}
-          class="text-accent focus:ring-accent focus:ring-offset-raised hidden items-center gap-2 text-xl font-bold transition hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none md:flex"
+          class="text-accent focus:ring-accent focus:ring-offset-raised hidden items-center gap-2 text-xl font-bold hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none md:flex"
           aria-label={`Call us at ${phone}`}
         >
           <svg
