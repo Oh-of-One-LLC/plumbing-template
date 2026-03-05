@@ -1,5 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface MenuItem {
   name: string;
@@ -15,16 +16,24 @@ interface Props {
 const { menuItems, logo, phone } = Astro.props;
 ---
 
-<header
-  class="bg-brand text-brand-fg sticky top-0 z-50 border-b border-slate-900"
->
+<header class="bg-raised text-text border-border sticky top-0 z-50 border-b">
   <div
     class="mx-8 flex h-20 max-w-9/10 items-center justify-between sm:px-8 lg:mx-auto lg:px-12"
   >
     <a
       href="/#top"
-      class="hover:text-brand-fg-muted focus:ring-offset-brand text-lg font-semibold transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none lg:text-2xl"
-      >{logo}</a
+      class="hover:text-text-muted focus:ring-accent focus:ring-offset-raised flex h-full items-center py-3 text-lg font-semibold transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none lg:text-2xl"
+      >{
+        typeof logo === "string" ? (
+          logo
+        ) : (
+          <Image
+            src={logo}
+            alt=""
+            class="h-full w-auto rounded-lg object-contain"
+          />
+        )
+      }</a
     >
     <!-- Desktop Nav -->
     <nav class="hidden gap-8 text-base font-medium md:flex">
@@ -32,7 +41,7 @@ const { menuItems, logo, phone } = Astro.props;
         (menuItems ?? []).map((item) => (
           <a
             href={item.href}
-            class="hover:text-brand-fg-muted focus:ring-offset-brand text-lg transition-all focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            class="hover:text-text-muted focus:ring-accent focus:ring-offset-raised text-lg transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none"
           >
             {item.name}
           </a>
@@ -45,7 +54,7 @@ const { menuItems, logo, phone } = Astro.props;
       phone && (
         <a
           href={`tel:${phone}`}
-          class="text-brand-red focus:ring-offset-brand hidden items-center gap-2 text-xl font-bold transition hover:opacity-80 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none md:flex"
+          class="text-accent focus:ring-accent focus:ring-offset-raised hidden items-center gap-2 text-xl font-bold transition hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none md:flex"
           aria-label={`Call us at ${phone}`}
         >
           <svg
@@ -70,7 +79,7 @@ const { menuItems, logo, phone } = Astro.props;
     <!-- Mobile Button -->
     <button
       id="menu-btn"
-      class="focus:ring-offset-brand rounded-lg p-4 text-3xl transition hover:bg-slate-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none md:hidden"
+      class="hover:bg-border focus:ring-accent focus:ring-offset-raised rounded-lg p-4 text-3xl transition focus:ring-2 focus:ring-offset-2 focus:outline-none md:hidden"
       aria-label="Toggle Menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -82,14 +91,14 @@ const { menuItems, logo, phone } = Astro.props;
   <!-- Mobile Menu -->
   <div
     id="mobile-menu"
-    class="bg-brand absolute max-h-0 w-full overflow-hidden transition-all duration-300 md:hidden"
+    class="bg-raised absolute max-h-0 w-full overflow-hidden transition-all duration-300 md:hidden"
   >
     <nav class="flex flex-col gap-4 pb-5 text-base font-medium">
       {
         (menuItems ?? []).map((item) => (
           <a
             href={item.href}
-            class="focus:ring-offset-brand mx-8 text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            class="hover:text-text-muted focus:ring-offset-brand mx-8 text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
           >
             {item.name}
           </a>
@@ -99,7 +108,7 @@ const { menuItems, logo, phone } = Astro.props;
         phone && (
           <a
             href={`tel:${phone}`}
-            class="text-brand-red focus:ring-offset-brand mx-8 text-xl font-bold focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+            class="text-accent focus:ring-offset-brand mx-8 text-xl font-bold focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             aria-label={`Call us at ${phone}`}
           >
             {phone}

@@ -4,9 +4,10 @@ import About from "../components/about/about-1.astro";
 import Services from "../components/services/services-1.astro";
 import Testimonials from "../components/testimonials/testimonials-1.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import LowePlumbing from "../assets/lowePlumbing.jpg";
 ---
 
-<BaseLayout>
+<BaseLayout logo={LowePlumbing}>
   <Fragment slot="main">
     <Hero />
     <About />

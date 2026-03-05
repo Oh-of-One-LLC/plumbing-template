@@ -6,11 +6,11 @@
    Used for primary sections: header, hero, footer.
    ============================================ */
 @theme {
-  --color-brand: #020618; /* Dark navy */
-  --color-brand-subtle: #0d1829; /* Nested brand surfaces */
+  --color-brand: #1535c0; /* Logo cobalt */
+  --color-brand-subtle: #0f2899; /* Deeper cobalt for nested surfaces */
   --color-brand-fg: #ffffff; /* Text on brand bg */
-  --color-brand-fg-muted: #8fa8c8; /* Muted text on brand bg */
-  --color-brand-red: #dc2626; /* Red accent for brand sections */
+  --color-brand-fg-muted: #c8d5f8; /* Muted text on brand bg */
+  --color-brand-red: #3d5fe0; /* Lighter cobalt for highlights within brand sections */
   --color-brand-red-fg: #ffffff; /* Text on brand-red bg */
 }
 
@@ -18,18 +18,18 @@
    Semantic Colors — Light Mode (default)
    ============================================ */
 :root {
-  --color-bg: #f8f9fa; /* Page background */
+  --color-bg: #f9fafb; /* Page background */
   --color-bg-surface: #ffffff; /* Cards, panels */
-  --color-bg-raised: #f1f3f5; /* Inputs, elevated surfaces */
+  --color-bg-raised: #f3f4f6; /* Inputs, elevated surfaces */
 
-  --color-tx: #0d0f14; /* Primary text */
-  --color-tx-muted: #5d6b82; /* Supporting text — #64748b was 4.41:1 on bg-background, fails AA */
-  --color-tx-subtle: #606b7f; /* Placeholders, captions — #717a8a was 4.33:1 on bg-surface, fails AA */
+  --color-tx: #111827; /* Primary text */
+  --color-tx-muted: #6b7280; /* Supporting text */
+  --color-tx-subtle: #9ca3af; /* Placeholders, captions */
 
-  --color-bd: #e2e8f0; /* Default border */
-  --color-bd-strong: #cbd5e0; /* Emphasized border */
+  --color-bd: #e5e7eb; /* Default border */
+  --color-bd-strong: #d1d5db; /* Emphasized border */
 
-  --color-ac: #2563eb; /* Accent — CTAs, links */
+  --color-ac: #1535c0; /* Accent — logo cobalt */
   --color-ac-fg: #ffffff; /* Text on accent bg */
 }
 
@@ -38,19 +38,19 @@
    ============================================ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #0d1526;
-    --color-bg-surface: #152035;
-    --color-bg-raised: #192840; /* #1e2d47 gave 2.86:1 for brand-red icons, fails AA non-text */
+    --color-bg: #111827;
+    --color-bg-surface: #1f2937;
+    --color-bg-raised: #374151;
 
-    --color-tx: #edf2f7;
-    --color-tx-muted: #8fa8c8;
-    --color-tx-subtle: #6b8eae;
+    --color-tx: #f9fafb;
+    --color-tx-muted: #d1d5db;
+    --color-tx-subtle: #9ca3af;
 
-    --color-bd: #1e2d47;
-    --color-bd-strong: #2a3f63;
+    --color-bd: #374151;
+    --color-bd-strong: #4b5563;
 
-    --color-ac: #60a5fa;
-    --color-ac-fg: #0d1526;
+    --color-ac: #6b8eff; /* Brightened cobalt for dark mode legibility */
+    --color-ac-fg: #111827;
   }
 }
 
