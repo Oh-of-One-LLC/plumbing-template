@@ -10,11 +10,9 @@ import { PHONE } from "../../config";
     <div class="flex flex-col gap-8">
       <!-- Eyebrow -->
       <div class="flex items-center gap-3">
-        <div class="bg-brand-red h-0.5 w-8" aria-hidden="true"></div>
-        <p
-          class="text-brand-fg-muted text-xs font-semibold tracking-widest uppercase"
-        >
-          Available 24/7 for emergencies
+        <div class="h-0.5 w-8 bg-white" aria-hidden="true"></div>
+        <p class="text-accent text-xs font-semibold tracking-widest uppercase">
+          Lowe Plumbing and Drain Cleaning
         </p>
       </div>
 
@@ -22,26 +20,26 @@ import { PHONE } from "../../config";
       <h1
         class="font-['Georgia',serif] text-5xl leading-tight font-bold tracking-tight md:text-6xl"
       >
-        Expert Plumbing<br />You Can <span class="text-brand-red">Trust.</span>
+        Expert Plumbing<br />You Can <span class="text-accent">Trust</span>.
       </h1>
 
       <!-- Supporting copy -->
-      <p class="text-brand-fg-muted max-w-md text-lg">
+      <p class="text-brand-fg max-w-md text-lg">
         Fast, reliable service for homes and businesses across Denver. Licensed,
-        insured, and family-owned for over 20 years.
+        insured, and family-owned for over 6 years.
       </p>
 
       <!-- CTAs -->
       <div class="flex flex-col gap-4 text-center sm:flex-row">
         <a
           href="/#call"
-          class="bg-brand-red text-brand-red-fg focus:ring-offset-brand rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          class="bg-accent text-brand-red-fg focus:ring-offset-brand rounded-lg px-8 py-3 text-lg font-semibold transition hover:opacity-90 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >
           Get a Free Quote
         </a>
         <a
           href={`tel:${PHONE}`}
-          class="text-brand-fg focus:ring-offset-brand rounded-lg border border-white/30 px-8 py-3 text-lg font-semibold transition hover:bg-white/10 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
+          class="bg-brand-fg text-brand focus:ring-offset-brand rounded-lg border border-white/30 px-8 py-3 text-lg font-semibold transition hover:bg-white/10 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
         >
           Call Now
         </a>
@@ -50,7 +48,7 @@ import { PHONE } from "../../config";
       <!-- Stats row -->
       <dl class="flex flex-wrap gap-x-8 gap-y-4 border-t border-white/10 pt-6">
         <div class="flex flex-col gap-0.5">
-          <dd class="text-3xl font-bold">20+</dd>
+          <dd class="text-3xl font-bold">6+</dd>
           <dt class="text-brand-fg-muted text-sm">Years in business</dt>
         </div>
         <div class="h-auto w-px self-stretch bg-white/10" aria-hidden="true">
@@ -62,35 +60,35 @@ import { PHONE } from "../../config";
         <div class="h-auto w-px self-stretch bg-white/10" aria-hidden="true">
         </div>
         <div class="flex flex-col gap-0.5">
-          <dd class="text-3xl font-bold">24/7</dd>
-          <dt class="text-brand-fg-muted text-sm">Emergency service</dt>
+          <dd class="text-3xl font-bold">100%</dd>
+          <dt class="text-brand-fg-muted text-sm">Satisfaction</dt>
         </div>
       </dl>
     </div>
 
     <!-- Emergency Call Card -->
     <aside
-      class="bg-brand-subtle flex flex-col gap-6 rounded-xl border border-white/10 p-8"
+      class="bg-brand-fg flex flex-col gap-6 rounded-xl border border-white/10 p-8"
       aria-label="Emergency contact"
     >
-      <p
-        class="text-brand-fg-muted text-xs font-semibold tracking-widest uppercase"
-      >
+      <p class="text-tx text-xs font-semibold tracking-widest uppercase">
         Emergency / Call Us
       </p>
 
       <div class="flex flex-col gap-3">
-        <h2 class="font-['Georgia',serif] text-2xl leading-snug font-bold">
+        <h2
+          class="text-brand font-['Georgia',serif] text-2xl leading-snug font-bold"
+        >
           Burst pipe? Flooding?<br />We're on our way.
         </h2>
         <a
           href={`tel:${PHONE}`}
-          class="text-brand-fg hover:text-brand-red text-3xl font-bold tracking-tight transition focus:ring-2 focus:ring-white focus:outline-none"
+          class="text-accent hover:text-brand-red text-3xl font-bold tracking-tight transition focus:ring-2 focus:ring-white focus:outline-none"
           aria-label={`Call us at ${PHONE}`}
         >
           {PHONE}
         </a>
-        <p class="text-brand-fg-muted text-sm">
+        <p class="text-tx text-sm">
           Call us now — we'll be there within the hour.
         </p>
       </div>
@@ -103,7 +101,7 @@ import { PHONE } from "../../config";
             "No overtime charges",
             "Satisfaction guaranteed",
           ].map((item) => (
-            <li class="text-brand-fg-muted flex items-center gap-3 text-sm">
+            <li class="text-tx flex items-center gap-3 text-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

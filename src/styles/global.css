@@ -12,6 +12,8 @@
   --color-brand-fg-muted: #c8d5f8; /* Muted text on brand bg */
   --color-brand-red: #3d5fe0; /* Lighter cobalt for highlights within brand sections */
   --color-brand-red-fg: #ffffff; /* Text on brand-red bg */
+  --color-accent: #ff6a00;
+  --color-tx: #111827; /* Primary text */
 }
 
 /* ============================================
@@ -29,14 +31,14 @@
   --color-bd: #e5e7eb; /* Default border */
   --color-bd-strong: #d1d5db; /* Emphasized border */
 
-  --color-ac: #1535c0; /* Accent — logo cobalt */
+  --color-ac: #f95d00;
   --color-ac-fg: #ffffff; /* Text on accent bg */
 }
 
 /* ============================================
    Semantic Colors — Dark Mode
    ============================================ */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #111827;
     --color-bg-surface: #1f2937;
@@ -49,10 +51,10 @@
     --color-bd: #374151;
     --color-bd-strong: #4b5563;
 
-    --color-ac: #6b8eff; /* Brightened cobalt for dark mode legibility */
+    --color-ac: #6b8eff; 
     --color-ac-fg: #111827;
   }
-}
+} */
 
 /* ============================================
    Tailwind Utility Mapping

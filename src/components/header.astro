@@ -16,13 +16,13 @@ interface Props {
 const { menuItems, logo, phone } = Astro.props;
 ---
 
-<header class="bg-raised text-text border-border sticky top-0 z-50 border-b">
+<header class="bg-brand text-brand-fg border-border sticky top-0 z-50 border-b">
   <div
     class="mx-8 flex h-20 max-w-9/10 items-center justify-between sm:px-8 lg:mx-auto lg:px-12"
   >
     <a
       href="/#top"
-      class="hover:text-text-muted focus:ring-accent focus:ring-offset-raised flex h-full items-center py-3 text-lg font-semibold transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none lg:text-2xl"
+      class="hover:text-brand-fg-muted focus:ring-accent focus:ring-offset-raised flex h-full items-center py-3 text-lg font-semibold transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none lg:text-2xl"
       >{
         typeof logo === "string" ? (
           logo
