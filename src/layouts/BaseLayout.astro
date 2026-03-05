@@ -2,7 +2,11 @@
 import "../styles/global.css";
 import Header from "../components/header.astro";
 import Footer from "../components/footer/footer-with-form.astro";
-import { COMPANY_NAME as companyName, PHONE as phone } from "../config";
+import {
+  COMPANY_NAME as companyName,
+  PHONE as phone,
+  ADDRESS as address,
+} from "../config";
 
 const menuItems = [
   { name: "Services", href: "/#services" },
@@ -31,7 +35,7 @@ const { pageTitle = companyName, logo } = Astro.props;
         <slot name="main" />
       </main>
 
-      <Footer companyName={companyName} phone={phone} />
+      <Footer companyName={companyName} phone={phone} address={address} />
     </div>
   </body>
 </html>
