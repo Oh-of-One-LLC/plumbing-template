@@ -1,40 +1,76 @@
 ---
 const services = [
   {
-    title: "Emergency Repairs",
+    title: "24/7 Emergency Service",
     description:
-      "Burst pipe? Severe leak? We're available 24/7 to handle any plumbing emergency fast.",
+      "Burst pipe? Flooding? We're available around the clock — call us and we'll be there within the hour.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>`,
+  },
+  {
+    title: "Sewer Main Clearing",
+    description:
+      "A blocked sewer main can bring your whole home to a halt. We clear the clog fast and get everything flowing the way it should.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
   },
   {
-    title: "Drain Cleaning",
+    title: "Faucets, Fixtures & Pipes",
     description:
-      "Slow or blocked drains cleared quickly using professional-grade equipment.",
+      "From dripping faucets to aging pipes, we handle repairs and replacements with quality parts built to last.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
   },
   {
-    title: "Pipe Repair & Installation",
+    title: "Gas Piping",
     description:
-      "From pinhole leaks to full repiping — we handle every pipe job to code.",
+      "Safe, code-compliant gas line installation and repairs you can trust. We treat every gas job with the precision and care it demands.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
   },
   {
-    title: "Water Heater Service",
+    title: "Basement Drainage — Install",
     description:
-      "Installation, repair, and maintenance for tank and tankless water heaters.",
+      "Keep water out of your basement for good. We install drainage channel systems designed to redirect water before it becomes a problem.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c0 6-8 6-8 12a8 8 0 0 0 16 0c0-6-8-6-8-12z"/><path d="M12 22v-4"/></svg>`,
   },
   {
-    title: "Bathroom & Kitchen Plumbing",
+    title: "Basement Drainage — Service",
     description:
-      "Faucets, toilets, sinks, and fixtures — installed or repaired to last.",
+      "Already have a drainage system? We inspect, maintain, and repair it to make sure it's ready when you need it most.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M12 2v4"/><path d="M12 6a4 4 0 0 1 4 4v2H8v-2a4 4 0 0 1 4-4z"/></svg>`,
   },
   {
-    title: "Commercial Plumbing",
+    title: "Bathtub Installation & Replacement",
     description:
-      "Full-service plumbing solutions for offices, restaurants, and commercial buildings.",
+      "Whether you're upgrading or replacing a worn-out tub, we handle the full installation cleanly and efficiently.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>`,
+  },
+  {
+    title: "Faucet Repair or Replacement",
+    description:
+      "A leaky or broken faucet wastes water and money. We'll fix it right or replace it with a fixture that fits your needs and budget.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+  },
+  {
+    title: "Commercial Bathtub Installation",
+    description:
+      "We install and replace commercial-grade bathtubs built for heavy use — on schedule and up to code.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg>`,
+  },
+  {
+    title: "Commercial Gas Piping",
+    description:
+      "From new construction to retrofits, we design and install commercial gas systems that meet code and keep your business running safely.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+  },
+  {
+    title: "Commercial Sewer Main Clearing",
+    description:
+      "Don't let a sewer backup shut down your business. Our commercial clearing service responds fast to get you back up and running.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c0 6-8 6-8 12a8 8 0 0 0 16 0c0-6-8-6-8-12z"/><path d="M12 22v-4"/></svg>`,
+  },
+  {
+    title: "Walk-In Tub Installation",
+    description:
+      "Give yourself or a loved one greater independence and safety in the bath. We install walk-in tubs with care, precision, and respect for your home.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>`,
   },
 ];
 ---
