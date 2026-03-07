@@ -1,8 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
-import LowePlumbing from "../assets/lowePlumbing.jpg";
-
 interface MenuItem {
   name: string;
   href: string;
@@ -24,18 +20,7 @@ const { menuItems, logo, phone } = Astro.props;
     <a
       href="/#top"
       class="focus:ring-accent focus:ring-offset-raised flex h-full items-center py-3 text-lg font-semibold transition-all hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none lg:text-2xl"
-      >{
-        typeof logo === "string" ? (
-          logo
-        ) : (
-          <Image
-            src={LowePlumbing}
-            alt=""
-            class="h-full w-auto rounded-lg object-contain"
-            aria-label="Lowe Plumbing and Drain Cleaning Logo"
-          />
-        )
-      }</a
+      >{logo}</a
     >
     <!-- Desktop Nav -->
     <nav class="hidden gap-8 text-base md:flex">

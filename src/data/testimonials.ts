@@ -13,7 +13,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Josh is really great to work with. He was very polite and explained all of the work that he did when he was done. Should I ever need plumbing services again in the future, I already know I'll be checking in with Lowe Plumbing for it.",
+      "Josh is really great to work with. He was very polite and explained all of the work that he did when he was done. Should I ever need plumbing services again in the future, I already know I'll be checking in with Smith & Sons for it.",
     name: "Lloyd M.",
     context: "Bathtub Installation and Replacement",
   },
