@@ -1,6 +1,6 @@
-const COMPANY_NAME = "Lowe Plumbing and Drain Cleaning";
-const PHONE = "(720) 766-9640";
-const ADDRESS = "5050 Stone Crop Court, Castle Rock, CO 80109";
-const EMAIL = "loweplumbingcolorado@gmail.com";
+const COMPANY_NAME = "Smith & Sons Plumbing";
+const PHONE = "(720) 123-4567";
+const ADDRESS = "123 Iliff Ave, Aurora CO 80014";
+const EMAIL = "inquiries@smithandsons.com";
 
 export { COMPANY_NAME, PHONE, ADDRESS, EMAIL };

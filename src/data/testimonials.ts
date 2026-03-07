@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     quote:
-      "Dennis is great all around: professional, good customer service skills, competitive prices, excellent quality of work.",
+      "Josh is great all around: professional, good customer service skills, competitive prices, excellent quality of work.",
     name: "Meisha C.",
     context: "Faucets, Fixtures and Pipes Repair or Replace",
   },
@@ -13,13 +13,13 @@ export const testimonials = [
   },
   {
     quote:
-      "Dennis is really great to work with. He was very polite and explained all of the work that he did when he was done. Should I ever need plumbing services again in the future, I already know I'll be checking in with Lowe Plumbing for it.",
+      "Josh is really great to work with. He was very polite and explained all of the work that he did when he was done. Should I ever need plumbing services again in the future, I already know I'll be checking in with Lowe Plumbing for it.",
     name: "Lloyd M.",
     context: "Bathtub Installation and Replacement",
   },
   {
     quote:
-      "I can't recommend Dennis enough. It's hard to find people of his character and overall quality work these days. Don't waste your time and look anywhere else. Hire Dennis",
+      "I can't recommend Josh enough. It's hard to find people of his character and overall quality work these days. Don't waste your time and look anywhere else. Hire Josh",
     name: "Ryan T.",
     context: "Faucets, Fixtures and Pipes Repair or Replace",
   },
