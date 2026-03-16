@@ -1,14 +1,14 @@
 export const testimonials = [
   {
     quote:
-      "Smith & Sons showed up within the hour at 2am when our pipe burst. Absolute lifesavers — professional, calm, and had it sorted before sunrise.",
-    name: "Sarah Mitchell",
+      "Smith & Sons showed up with no complaints at 3am when our pipe burst. Absolute lifesavers — professional, calm, and had it sorted before sunrise.",
+    name: "Sarah Jenkins",
     context: "Homeowner, emergency repair",
   },
   {
     quote:
       "We had a persistent leak under the kitchen sink that two other plumbers couldn't fix properly. These guys diagnosed it immediately and sorted it for good.",
-    name: "James Torres",
+    name: "James Vasquez",
     context: "Homeowner, kitchen plumbing",
   },
   {
@@ -20,7 +20,7 @@ export const testimonials = [
   {
     quote:
       "We brought them in to replumb our restaurant kitchen. They worked around our schedule to minimise downtime. Couldn't ask for more.",
-    name: "Mike Delaney",
+    name: "Mike Delacroix",
     context: "Restaurant owner, commercial fit-out",
   },
   {
@@ -32,7 +32,7 @@ export const testimonials = [
   {
     quote:
       "Quick, no-fuss drain cleaning. Arrived on time, explained everything clearly, and left the place spotless. Will definitely call again.",
-    name: "Tom Hargreaves",
+    name: "Tom Westminster",
     context: "Landlord, drain maintenance",
   },
 ];
